@@ -15,10 +15,9 @@ session_start();
 <select name="process" required="required">
 <option>select</option>
   <option value="SORT_DESC">SORT DESC</option>
-  <option value="SORT_ASC">SORT ASC</option>
+  <option value="SORT_ASC" selected="selected">SORT ASC</option>
 </select>
 <select name="method" required="required">
-<option>select</option>
   <option value="id">id</option>
   <option value="Vendor">Vendor</option>
   <option value="Product Name">Product Name</option>
@@ -26,7 +25,7 @@ session_start();
   <option value="unit">unit</option>
   <option value="Vendor">Vendor</option>
   <option value="Weight">Weight</option>
-  <option value="price">price</option>
+  <option value="price" selected="selected">price</option>
 </select>
 </select>
 <input type="submit" value="Upload CSV" name="submit">
