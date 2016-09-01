@@ -17,7 +17,26 @@ extract($_POST);
             	$i++;
             }
         } 
-     } //print_r($final_data);  
+     }// print_r($final_data);  
+echo 'listing of products By Specific Product Id'."</br>";
+echo "<hr>";
+
+$a=array(3736, 4356, 3732, 3746, 3759, 3719, 3740, 4341);
+
+    foreach ($final_data as $obj) {
+
+       foreach ($obj as $key => $value) {
+
+            if(in_array($value,$a))
+           {
+            print_r($obj);
+            echo "</br>";
+            } 
+        }  
+    }
+echo "<hr>";
+echo 'listing of products By Sorted'."</br>";
+echo "<hr>";
 
 function array_sort_by_column(&$arr, $col, $dir) {
     $sort_col = array();
@@ -32,11 +51,13 @@ else
 }
 $result = array_sort_by_column($final_data, $method,$process);
 //print_r($final_data);
+$i = 0;
 foreach($final_data as $key => $variable)
 {
 	foreach ($variable as $key => $value) {
 		echo $key .'-' . $value;
 		echo "</br>";
-	}
+	} $i++;
+    if($i == 3) break;
 	echo "</br>";
 }
